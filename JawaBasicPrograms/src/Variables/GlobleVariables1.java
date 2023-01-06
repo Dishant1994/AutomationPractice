@@ -1,0 +1,35 @@
+package Variables;
+
+ class GlobleVariables1 
+	 {
+		static int empId=1005;
+		double salary=45000;
+		int pinCode;
+		public static void main(String[] args) 
+		{
+			System.out.println("Program Starts");
+			int age=25;
+			System.out.println("Local Variable age: "+age);
+
+			System.out.println("SGV empId: "+empId);
+			System.out.println("SGV empId with std: "+GlobleVariables1.empId);
+			/*
+			GlobalVariables1 g1;
+			g1= new GlobalVariables1();
+			*/
+			GlobleVariables1 g1 = new GlobleVariables1();
+			System.out.println("with g1, NSGV salary: "+g1.salary);
+			g1.salary=65000.45;
+			System.out.println("with g1, updated, NSGV salary: "+g1.salary);
+
+			empId=5007;
+			System.out.println("SGV empId: "+empId);
+
+			GlobleVariables1 g2 = new GlobleVariables1();
+			System.out.println("with g2,NSGV salary: "+g2.salary);
+			GlobleVariables1 g3=new GlobleVariables1();
+			System.out.println("with g3,NSGV pincod: "+g3.pinCode);
+			System.out.println("Program Ends");
+			
+		}
+	}
